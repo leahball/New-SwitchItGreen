@@ -8,10 +8,12 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "start-storybook -p 6006",
+    "sb": "npm run storybook",
     "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.0.2",
+    "@chakra-ui/theme": "^2.0.3",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "framer-motion": "^6.3.3",

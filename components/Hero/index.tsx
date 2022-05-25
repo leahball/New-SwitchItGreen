@@ -1,12 +1,26 @@
 import React from "react";
-import { VStack, Heading, Text, SimpleGrid, GridItem, Image } from "@chakra-ui/react";
+import {
+  VStack,
+  Heading,
+  Text,
+  SimpleGrid,
+  GridItem,
+  Image,
+} from "@chakra-ui/react";
 
-const index = () => {
+type HeroProps = {
+  title?: string;
+  subTitle?: string;
+};
+
+const Hero = ({ title, subTitle }: HeroProps) => {
   const heroContent = {
     iconUrl: "/public/make-the-change-icon-1@2x.png",
     iconAlt: "Leaf icon",
-    title: "Your Impact",
-    text: "Moving your money out of banks, energy companies and pensions that finance fossil fuels is the most effective, simple action you can take to fight the climate crisis.",
+    title: title || "Your Impact",
+    subTitle:
+      subTitle ||
+      "Moving your money out of banks, energy companies and pensions that finance fossil fuels is the most effective, simple action you can take to fight the climate crisis.",
   };
   return (
     <VStack w="full" h="full" spacing={4} align-items="flex-start">
@@ -18,11 +32,11 @@ const index = () => {
           <Heading size="2xl">{heroContent.title}</Heading>
         </GridItem>
         <GridItem colSpan={3}>
-          <Text>{heroContent.text}</Text>
+          <Text>{heroContent.subTitle}</Text>
         </GridItem>
       </SimpleGrid>
     </VStack>
   );
 };
 
-export default index;
+export default Hero;
