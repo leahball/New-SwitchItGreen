@@ -1,13 +1,10 @@
 import { extendTheme } from '@chakra-ui/react'
+import defaultColors from "./colors";
 
 // example theme
-const theme = extendTheme({
+const appTheme = extendTheme({
   colors: {
-      brand: {
-        drkGreen: '#164046',
-        ltGreen: '#7ebc42',
-        htPink: '#ED2D95',
-      }
+    ...defaultColors
   },
   fonts: {
     body: "silka",
@@ -66,3 +63,5 @@ const theme = extendTheme({
     widest: "0.1em",
   },
 });
+
+export default appTheme
