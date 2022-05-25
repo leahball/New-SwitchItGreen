@@ -1,18 +1,11 @@
-import * as React from "react";
+import * as React from "react"
+import AppThemeProvider from '../public/theme-provider'
 
-// TODO: add ThemeProvider here (wrap around Story child component)
-const ThemeDecorator = (Story) => {
-  return <Story />;
-};
+// The AppThemeProvider has the Chakra ColorModeProvider and ThemeProvider
+const ThemeDecorator = (Story) => (
+  <AppThemeProvider>
+    <Story />
+  </AppThemeProvider>
+)
 
 export const decorators = [ThemeDecorator];
-
-// export const parameters = {
-//   actions: { argTypesRegex: "^on[A-Z].*" },
-//   controls: {
-//     matchers: {
-//       color: /(background|color)$/i,
-//       date: /Date$/,
-//     },
-//   },
-// }
