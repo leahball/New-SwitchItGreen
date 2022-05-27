@@ -1,38 +1,51 @@
 import React from "react";
-import {
-  VStack,
-  Heading,
-  Text,
-  SimpleGrid,
-  GridItem,
-  Image,
-} from "@chakra-ui/react";
+import { VStack, Heading, Text, SimpleGrid, GridItem } from "@chakra-ui/react";
+import Image from "next/image";
+import styled from "@emotion/styled";
 
 type HeroProps = {
   title?: string;
   subTitle?: string;
 };
 
+const StyledHeading = styled(Heading)`
+  color: ${({ theme }) => theme.colors.SIPink.base};
+  display: inline-flex;
+  padding: 10px;
+  text-decoration: uppercase;
+`;
+
+const StyledSubtitle = styled(Text)`
+  line-height: 24px;
+  font-weight: 300;
+`;
+
 const Hero = ({ title, subTitle }: HeroProps) => {
   const heroContent = {
-    iconUrl: "/public/make-the-change-icon-1@2x.png",
+    iconUrl: "/public/your-impact-icon@2x.png",
     iconAlt: "Leaf icon",
     title: title || "Your Impact",
     subTitle:
       subTitle ||
       "Moving your money out of banks, energy companies and pensions that finance fossil fuels is the most effective, simple action you can take to fight the climate crisis.",
   };
+
   return (
     <VStack w="full" h="full" spacing={4} align-items="flex-start">
-      <SimpleGrid columns={3} columnGap={3} w="full">
+      <SimpleGrid columns={2} columnGap={3} w="full">
         <GridItem colSpan={1}>
-          <Image src={heroContent.iconUrl} alt={heroContent.iconAlt} />
+          <Image
+            width={28}
+            height={29}
+            src={heroContent.iconUrl}
+            alt={heroContent.iconAlt}
+          />
+          <StyledHeading as="h3" size="md">
+            {heroContent.title}
+          </StyledHeading>
         </GridItem>
         <GridItem colSpan={2}>
-          <Heading size="2xl">{heroContent.title}</Heading>
-        </GridItem>
-        <GridItem colSpan={3}>
-          <Text>{heroContent.subTitle}</Text>
+          <StyledSubtitle fontSize="lg">{heroContent.subTitle}</StyledSubtitle>
         </GridItem>
       </SimpleGrid>
     </VStack>

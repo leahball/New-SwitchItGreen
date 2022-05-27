@@ -15,5 +15,6 @@ export const HeroStorybook: ComponentStory<typeof Hero> = (args) => {
 
 HeroStorybook.args = {
   title: "Hello Hero",
-  subTitle: "Here is a catchy little subtitle. Lorem ipsum...",
+  subTitle:
+    "Moving your money out of banks, energy companies and pensions that finance fossil fuels is the most effective, simple action you can take to fight the climate crisis.",
 };
