@@ -1,7 +1,7 @@
-import React from "react";
-import { VStack, Heading, Text, SimpleGrid, GridItem } from "@chakra-ui/react";
-import Image from "next/image";
-import styled from "@emotion/styled";
+import React from "react"
+import { VStack, Heading, Text, SimpleGrid, GridItem } from "@chakra-ui/react"
+import Image from "next/image"
+import styled from "@emotion/styled"
 
 type HeroProps = {
   title?: string;
@@ -22,7 +22,7 @@ const StyledSubtitle = styled(Text)`
 
 const Hero = ({ title, subTitle }: HeroProps) => {
   const heroContent = {
-    iconUrl: "/public/your-impact-icon@2x.png",
+    iconUrl: "/leaf.png",
     iconAlt: "Leaf icon",
     title: title || "Your Impact",
     subTitle:
@@ -37,7 +37,7 @@ const Hero = ({ title, subTitle }: HeroProps) => {
           <Image
             width={28}
             height={29}
-            src={heroContent.iconUrl}
+            src="/cursor.png"
             alt={heroContent.iconAlt}
           />
           <StyledHeading as="h3" size="md">
