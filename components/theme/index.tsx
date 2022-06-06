@@ -1,15 +1,14 @@
-import { extendTheme } from '@chakra-ui/react'
+import { extendTheme } from "@chakra-ui/react";
 import defaultColors from "./colors";
 
 // example theme
 const appTheme = extendTheme({
   colors: {
-    ...defaultColors
+    ...defaultColors,
   },
   fonts: {
-    body: "silka",
-    heading: "silka",
-    mono: "Menlo, monospace",
+    heading: `'Silka-bold', sans-serif`,
+    body: `"Silka-regular", sans-serif`,
   },
   fontSizes: {
     xs: "0.75rem",
@@ -64,4 +63,4 @@ const appTheme = extendTheme({
   },
 });
 
-export default appTheme
+export default appTheme;
