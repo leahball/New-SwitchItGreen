@@ -1,7 +1,7 @@
-import React from "react"
-import { VStack, Heading, Text, SimpleGrid, GridItem } from "@chakra-ui/react"
-import Image from "next/image"
-import styled from "@emotion/styled"
+import React from "react";
+import { VStack, Heading, Text, SimpleGrid, GridItem } from "@chakra-ui/react";
+import Image from "next/image";
+import styled from "@emotion/styled";
 
 type HeroProps = {
   title?: string;
@@ -12,7 +12,7 @@ const StyledHeading = styled(Heading)`
   color: ${({ theme }) => theme.colors.SIPink.base};
   display: inline-flex;
   padding: 10px;
-  text-decoration: uppercase;
+  text-transform: uppercase;
 `;
 
 const StyledSubtitle = styled(Text)`
