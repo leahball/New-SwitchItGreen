@@ -118,7 +118,7 @@ const defaultColors: DefaultColors = {
   SIPink: {
     darkest: "#49012a",
     dark: "#770544",
-    base: "#ed2c94",
+    base: "#ed2c95",
     medium: "#f25aac",
     light: "#fdb7dd",
     highlight: "#ffe4f6",

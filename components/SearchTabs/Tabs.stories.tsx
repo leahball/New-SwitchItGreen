@@ -9,4 +9,9 @@ export default {
   component: SearchTabs,
 } as ComponentMeta<typeof SearchTabs>;
 
-export const SearchTabsStorybook: ComponentStory<typeof SearchTabs> = (args) => <SearchTabs />;
+export const SearchTabsStorybook: ComponentStory<typeof SearchTabs> = (args) => 
+<SearchTabs 
+tabOne="Banks" 
+tabTwo="Energy Providers"
+tabThree="Pensions"
+/>;
