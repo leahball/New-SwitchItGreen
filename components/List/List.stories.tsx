@@ -9,4 +9,7 @@ export default {
   component: List,
 } as ComponentMeta<typeof List>;
 
-export const ListStorybook: ComponentStory<typeof List> = (args) => <List />;
+export const ListStorybook: ComponentStory<typeof List> = (args) => <List 
+listCheck="This is a list item with a checkmark"
+listNone="This is a list with an x-mark"
+/>;
