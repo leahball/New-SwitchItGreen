@@ -9,7 +9,7 @@ type SearchCardType = {
   moreInfo?: string;
 };
 
-const SubmitBtn = styled(Button)`
+export const SubmitBtn = styled(Button)`
   display: inline;
   background-color: ${({ theme }) => theme.colors.SIGreen.medium};
   border-radius: 20px;
@@ -47,7 +47,7 @@ const index = ({
       {subHeader && <SubHeader fontSize="14px">{subHeader}</SubHeader>}
       <Flex justifyItems="center" alignItems="center">
         <StyledInput placeholder={placeholder} />
-        <SubmitBtn type="submit" colorScheme="SIGreen.medium">
+        <SubmitBtn type="submit" >
           Search
         </SubmitBtn>
       </Flex>

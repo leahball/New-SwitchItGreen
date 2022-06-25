@@ -9,8 +9,8 @@ type ListType = {
 
 export default function list({ listCheck, listNone }: ListType) {
   return (
-    <Box mb={6}>
-      <List spacing={3}>
+    <Box>
+      <List spacing={2}>
         <ListItem>
           <ListIcon as={CheckIcon} color="green.500" />
           {listCheck}
