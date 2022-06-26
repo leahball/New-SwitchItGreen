@@ -9,7 +9,7 @@ type HeroProps = {
 };
 
 const StyledHeading = styled(Heading)`
-  color: ${({ theme }) => theme.colors.SIPink.base};
+  color: ${({ theme }) => theme.colors.Primary.base};
   display: inline-flex;
   padding: 10px;
   text-transform: uppercase;

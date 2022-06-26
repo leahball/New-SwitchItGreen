@@ -47,6 +47,11 @@ const defaultColors: DefaultColors = {
     base: "#faf5ea",
     light: "#F9F8EF",
   },
+  Result: {
+    dark: "#74090b",
+    base: "#E93535",
+    light: "#fcb8b8",
+  },
   black: {
     darkest: "#222",
     dark: "#302F2F",

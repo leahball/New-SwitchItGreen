@@ -12,7 +12,7 @@ export default function list({ listCheck, listNone }: ListType) {
     <Box>
       <List spacing={2}>
         <ListItem>
-          <ListIcon as={CheckIcon} color="green.500" />
+          <ListIcon as={CheckIcon} color="Accent.medium" />
           {listCheck}
         </ListItem>
         <ListItem>
