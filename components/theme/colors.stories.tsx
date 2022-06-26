@@ -15,7 +15,7 @@ interface Theme {
 
 const PaletteContainer = styled.div<Theme>`
   padding: 20px;
-  background-color: ${({ theme }) => `${theme.colors.silver.highlight}`};
+  background-color: ${({ theme }) => `${theme.colors.gray.highlight}`};
 `
 
 const StyledDiv = styled.div<Theme>`
@@ -23,7 +23,7 @@ const StyledDiv = styled.div<Theme>`
   height: 100px;
   border-radius: 8px;
   background-color: ${({ color }) => color};
-  box-shadow: ${({ theme }) => `3px 3px ${theme.colors.silver.highlight}`};
+  box-shadow: ${({ theme }) => `3px 3px ${theme.colors.gray.highlight}`};
   border: ${({ theme }) => `1px solid ${theme.colors.black.base}`}; ;
 `
 

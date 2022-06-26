@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <AppThemeProvider>
       <Fonts />
-      <Component style={{backgroundColor: 'SIDark.base'}} {...pageProps} />
+      <Component style={{backgroundColor: 'SIDark.medium'}} {...pageProps} />
     </AppThemeProvider>
   )
 }

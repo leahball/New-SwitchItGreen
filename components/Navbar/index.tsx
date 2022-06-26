@@ -35,9 +35,10 @@ const NavLink = ({ children, path }: { children: ReactNode; path: string }) => (
     px={2}
     py={1}
     rounded={"md"}
+    color={"#faf5ea"}
     _hover={{
       textDecoration: "none",
-      bg: useColorModeValue("gray.200", "gray.700"),
+      bg: useColorModeValue("gray.500", "gray.500"),
     }}
   >
     <Link href={path}>{children}</Link>

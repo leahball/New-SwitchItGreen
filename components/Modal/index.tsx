@@ -7,30 +7,37 @@ import {
   ModalFooter,
   ModalBody,
   ModalCloseButton,
-  Textarea,
+  Input,
   Button,
   useDisclosure,
+  InputGroup,
+  InputRightElement,
 } from "@chakra-ui/react";
-import { SubmitBtn } from "../SearchCard/index";
-// import styled from "@emotion/styled";
+import { SubmitBtn } from "components/SearchCard";
+import styled from "@emotion/styled";
+
+const StyledCTAHeader = styled("h2")`
+  color: ${({ theme }) => theme.colors.Secondary.dark};
+  font-size: 22px;
+  font-weight: 700;
+  text-shadow: -1px 1px 0px rgb(255 60 60 / 77%);
+`;
 
 export default function SwitchItModal() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Button colorScheme="pink" onClick={onOpen}>
-        See My Results
-      </Button>
+      <SubmitBtn onClick={onOpen}>See My Results</SubmitBtn>
       <Modal
         isCentered
         onClose={onClose}
         isOpen={isOpen}
         motionPreset="slideInBottom"
-        p={6}
+        size="xl"
       >
         <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>
+        <ModalContent align="center" justify="center" p={4}>
+          <ModalHeader fontSize="xx-large">
             Do you want to take part in our next Switch Day?
           </ModalHeader>
           <ModalCloseButton />
@@ -40,14 +47,25 @@ export default function SwitchItModal() {
               of climate-harming banks, potentially removing up to £200 billion
               of funding opportunities for the fossil fuel industry.
             </p>
+            <StyledCTAHeader>Join Us Now</StyledCTAHeader>
           </ModalBody>
-          <Textarea placeholder="Here is a sample placeholder" />
-          <ModalFooter>
-            <Button colorScheme="blue" mr={3} onClick={onClose}>
-              Get Updated
-            </Button>
-            <Button variant="ghost">Show me the score</Button>
+          <ModalFooter flexDirection="row" align="center">
+            <InputGroup size="lg">
+              <Input placeholder="Email" />
+              <InputRightElement width="auto" pr={1}>
+                <Button
+                  bg="Accent.base"
+                  color="Natural.light"
+                  onClick={onClose}
+                >
+                  Get Updated
+                </Button>
+              </InputRightElement>
+            </InputGroup>
           </ModalFooter>
+          <Button variant="link" color="Secondary.dark" mt={2} mb={2}>
+            Show me the score
+          </Button>
         </ModalContent>
       </Modal>
     </>

@@ -11,9 +11,9 @@ type SearchCardType = {
 
 export const SubmitBtn = styled(Button)`
   display: inline;
-  background-color: ${({ theme }) => theme.colors.SIGreen.medium};
+  background-color: ${({ theme }) => theme.colors.Accent.medium};
   border-radius: 20px;
-  width: 33%;
+  width: 30%;
   color: white;
 `;
 
@@ -26,13 +26,13 @@ const StyledInput = styled(Input)`
 `;
 
 const SubHeader = styled(Text)`
-  color: #164046;
+  color: ${({ theme }) => theme.colors.Secondary.dark};
 `;
 
 const DetailsLink = styled.a`
   text-decoration: underline;
   font-size: 14px;
-  color: #164046;
+  color: ${({ theme }) => theme.colors.Secondary.dark};
 `;
 
 const index = ({
@@ -43,13 +43,13 @@ const index = ({
 }: SearchCardType) => {
   return (
     <Box p="20px" bgColor={"rgb(249, 248, 239)"}>
-      <Text color="#164046" fontSize="24px">{header}</Text>
+      <Text color="#164046" fontSize="24px">
+        {header}
+      </Text>
       {subHeader && <SubHeader fontSize="14px">{subHeader}</SubHeader>}
       <Flex justifyItems="center" alignItems="center">
         <StyledInput placeholder={placeholder} />
-        <SubmitBtn type="submit" >
-          Search
-        </SubmitBtn>
+        <SubmitBtn type="submit">Search</SubmitBtn>
       </Flex>
       <DetailsLink href="#">{moreInfo}</DetailsLink>
     </Box>
